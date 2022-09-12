@@ -91,7 +91,7 @@ class TodoList {
   findTodoById(id: number): Todo | void {
     const targetTags = this.todoList.get(id);
     if (targetTags) return this.todoList.get(id);
-    else throw ID_NOT_FOUND_ERROR;
+    else throw ID_NOT_FOUND_ERROR(id);
   }
 
   /**
@@ -118,7 +118,7 @@ class TodoList {
         throw TAG_NOT_FOUND_ERROR([beforeTag]);
       }
     } else {
-      throw ID_NOT_FOUND_ERROR;
+      throw ID_NOT_FOUND_ERROR(id);
     }
   }
 
