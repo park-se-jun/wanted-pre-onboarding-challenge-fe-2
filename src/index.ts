@@ -4,7 +4,7 @@ const TAG_NOT_FOUND_ERROR = (tags: Array<string>) =>
   new Error(
     `찾는 tag : ${tags.toString()}일치하는 태그가 해당 todo에 없습니다.`
   );
-// todo를 생성할 때 사용되는 todo 데이터 입니다.
+// todo를 생성,수정 할 때 사용되는 todo 데이터 입니다.
 type TodoData = {
   complete?: boolean; // 할 일의 완료 여부를 전달합니다.
   content: string; // 해야할 일의 내용을 나타냅니다.require 값입니다.
